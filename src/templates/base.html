@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Landkit - {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-expand-md navbar-ligh pt-3">
+        <div class="container">
+
+            <a href="#" class="navbar-brand"><img src="{{ url_for('static', filename='images/brand.svg') }}" alt=""></a>
+
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="nav">
+                <ul class="navbar-nav mx-auto">
+
+                    <!-- landings -->
+                    <li class="nav-item dropdown" id="navbar-hover-land">
+                        <a class="nav-link px-3" href="#" style="color: #3561E8;">Landings</a>
+                        <div class="dropdown-menu p-0 m-0" id="landings">
+                            <div class="row nav-modal">
+                                <div class="col-md-6 col-12 text-light nav-bg-img" id="hidden-img"
+                                    style="background: linear-gradient(rgba(0, 0, 255, .7), rgba(0, 0, 255, .7)), url({{ url_for('static', filename='/images/photo-3.jpg') }}) no-repeat center center /cover;">
+                                    <div class="landings-left">
+                                        <h5>Want to see an over view</h5>
+                                        <p class="mb-3">See all the pages at once.</p>
+                                        <button class="btn btn-light text-primary mb-2">
+                                            View all pages
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span
+                                                class="dropdown-header text-uppercase text-primary mt-3">services</span>
+                                            <a class="dropdown-item text-secondary" href="#">Coworking</a>
+                                            <a class="dropdown-item text-secondary" href="#">Rental</a>
+                                            <a class="dropdown-item text-secondary" href="#">Job Listing</a>
+                                            <span class="dropdown-header text-uppercase text-primary">apps</span>
+                                            <a class="dropdown-item text-secondary" href="#">Desktop</a>
+                                            <a class="dropdown-item text-secondary" href="#">Mobile</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="dropdown-header text-uppercase text-primary mt-3">web</span>
+                                            <a class="dropdown-item text-secondary" href="#">Basic</a>
+                                            <a class="dropdown-item text-secondary" href="#">Enterprise</a>
+                                            <a class="dropdown-item text-secondary" href="#">Service</a>
+                                            <a class="dropdown-item text-secondary" href="#">Cloud Hosting</a>
+                                            <a class="dropdown-item text-secondary" href="#">Agency</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Pages -->
+                    <li class="nav-item dropdown" id="navbar-hover-pages">
+                        <a class="nav-link px-3" href="#" style="color: #3561E8;">Pages</a>
+                        <div class="dropdown-menu p-0 m-0" id="pages">
+                            <div class="row">
+                                <div class="col-md-3 col-6">
+                                    <span class="dropdown-header text-uppercase text-primary mt-3">career</span>
+                                    <a class="dropdown-item text-secondary" href="#">Listing</a>
+                                    <a class="dropdown-item text-secondary" href="#">Opening</a>
+                                    <span class="dropdown-header text-uppercase text-primary">company</span>
+                                    <a class="dropdown-item text-secondary" href="#">About</a>
+                                    <a class="dropdown-item text-secondary" href="#">Pricing</a>
+                                    <a class="dropdown-item text-secondary" href="#">Terms</a>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <span class="dropdown-header text-uppercase text-primary mt-3">help
+                                        center</span>
+                                    <a class="dropdown-item text-secondary" href="#">Overview</a>
+                                    <a class="dropdown-item text-secondary" href="#">Article</a>
+                                    <span class="dropdown-header text-uppercase text-primary">contact</span>
+                                    <a class="dropdown-item text-secondary" href="#">Basic</a>
+                                    <a class="dropdown-item text-secondary" href="#">Cover</a>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <span class="dropdown-header text-uppercase text-primary mt-3">Blog</span>
+                                    <a class="dropdown-item text-secondary" href="#">Rich view</a>
+                                    <a class="dropdown-item text-secondary" href="#">Article</a>
+                                    <a class="dropdown-item text-secondary" href="#">Showcase</a>
+                                    <a class="dropdown-item text-secondary" href="#">Search</a>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <span class="dropdown-header text-uppercase text-primary mt-3">portfolio
+                                        (new)</span>
+                                    <a class="dropdown-item text-secondary" href="#">Masonry</a>
+                                    <a class="dropdown-item text-secondary" href="#">Grid Rows</a>
+                                    <a class="dropdown-item text-secondary" href="#">Parallax</a>
+                                    <a class="dropdown-item text-secondary" href="#">Casestudy</a>
+                                    <a class="dropdown-item text-secondary" href="#">Sidebar</a>
+                                    <a class="dropdown-item text-secondary" href="#">Sidebar: Fluid</a>
+                                    <a class="dropdown-item text-secondary" href="#">Basic Grid</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <!-- Account -->
+                    <li class="nav-item dropdown" id="navbar-hover-acc">
+                        <a class="nav-link px-3" href="#" style="color: #3561E8;">Account</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarAccount">
+                            <li class="dropdown-item dropright" id="navbar-hover-signin">
+                                <a class="dropdown-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Sign In
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">
+                                        Side Cover
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Illustration
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Basic
+                                    </a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">
+                                        Modal Horizontal
+                                    </a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">
+                                        Modal Vertical
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="dropdown-item dropright" id="navbar-hover-signup">
+                                <a class="dropdown-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Sign Up
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">
+                                        Side Cover
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Illustration
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Basic
+                                    </a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">
+                                        Modal Horizontal
+                                    </a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">
+                                        Modal Vertical
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="dropdown-item dropright" id="navbar-hover-pass">
+                                <a class="dropdown-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Password Reset
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">
+                                        Side Cover
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Illustration
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Basic
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="dropdown-item dropright" id="navbar-hover-error">
+                                <a class="dropdown-link dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Error
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">
+                                        Side Cover
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Illustration
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Basic
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Documentation -->
+                    <li class="nav-item dropdown" id="navbar-hover-doc">
+                        <a class="nav-link px-3" href="#" style="color: #3561E8;">Documentation</a>
+                        <div class="dropdown-menu p-0 m-0">
+                            <a href="#" class="dropdown-item p-1 m-0 list-group-item">
+                                <div class="container p-1 m-0">
+                                    <div class="row p-1 m-0 ">
+
+
+                                        <div class="col-2 p-2 pr-0 m-0">
+                                            <svg width="40" height="40" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h24v24H0z" />
+                                                    <path
+                                                        d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z"
+                                                        fill="#335EEA" opacity=".3" />
+                                                    <path
+                                                        d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z"
+                                                        fill="#335EEA" />
+                                                    <rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2"
+                                                        rx="1" />
+                                                    <rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2"
+                                                        rx="1" />
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <div class="col-10 p-2 pr-5 m-0">
+                                            <div class="ml-4">
+
+                                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                                    Documentation
+                                                </h6>
+                                                <p class="font-size-sm text-gray-700 mb-0">
+                                                    Customizing and building
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div> <!-- / container-->
+                            </a>
+
+                            <a href="#" class="dropdown-item p-1 m-0 list-group-item">
+                                <div class="container p-1 m-0">
+                                    <div class="row p-1 m-0 ">
+
+
+                                        <div class="col-2 p-2 pr-0 m-0">
+                                            <svg width="40" height="40" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h24v24H0z" />
+                                                    <rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5" />
+                                                    <path
+                                                        d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z"
+                                                        fill="#335EEA" opacity=".3" />
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <div class="col-10 p-2 pr-5 m-0">
+                                            <div class="ml-4">
+
+                                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                                    Components
+                                                </h6>
+                                                <p class="font-size-sm text-gray-700 mb-0">
+                                                    Full list of components
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div> <!-- / container-->
+                            </a>
+
+                            <a href="#" class="dropdown-item p-1 m-0 list-group-item">
+                                <div class="container p-1 m-0">
+                                    <div class="row p-1 m-0 ">
+
+
+                                        <div class="col-2 p-2 pr-0 m-0">
+                                            <svg width="40" height="40" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h24v24H0z" />
+                                                    <path
+                                                        d="M5.857 2h7.88a1.5 1.5 0 01.968.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554c0 1.79-.02 1.917-1.857 1.917H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.127 4.02 2 5.857 2z"
+                                                        fill="#335EEA" opacity=".3" />
+                                                    <rect fill="#335EEA" x="6" y="11" width="9" height="2" rx="1" />
+                                                    <rect fill="#335EEA" x="6" y="15" width="5" height="2" rx="1" />
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <div class="col-8 p-2 pr-5 m-0">
+                                            <div class="ml-4">
+
+                                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                                    changelog
+                                                </h6>
+                                                <p class="font-size-sm text-gray-700 mb-0">
+                                                    Keep track of changes
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-2 pt-4">
+                                            <span class="badge badge-pill badge-secondary">1.1.3</span>
+                                        </div>
+
+                                    </div>
+                                </div> <!-- / container-->
+                            </a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="navbar-hover-land">
+                        <a class="nav-link px-3" href="{{ url_for('about') }}" style="color: #3561E8;">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown" id="navbar-hover-land">
+                        <a class="nav-link px-3" href="{{ url_for('contact') }}" style="color: #3561E8;">Contact Us</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline">
+                    <div class="input-group">
+                        <button type="button" class="btn btn-primary btn-block ml-auto lift">Buy now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR
+  ================================================== -->
+
+{% block content %}{% endblock %}
+
+    <!-- FOOTER
+    ================================================== -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 text-left">
+                    <p>
+                        <a href="#"><img src="{{ url_for('static', filename='images/brand.svg') }}" alt=""></a>
+                    </p>
+                    <p style="color: #566B94;">A better way to build.</p>
+                    <p>
+                        <a href="#"><img src="{{ url_for('static', filename='images/instagram.svg') }}"
+                                alt=""></a>&nbsp;&nbsp;
+                        <a href="#"><img src="{{ url_for('static', filename='images/facebook.svg') }}"
+                                alt=""></a>&nbsp;&nbsp;
+                        <a href="#"><img src="{{ url_for('static', filename='images/twitter.svg') }}"
+                                alt=""></a>&nbsp;&nbsp;
+                        <a href="#"><img src="{{ url_for('static', filename='images/pinterest.svg') }}" alt=""></a>
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6 my-3">
+                    <p class="text-uppercase" style="color: #566B94;">products</p>
+                    <p><a href="#">Page Builder</a></p>
+                    <p><a href="#">UI Kit</a></p>
+                    <p><a href="#">Styleguide</a></p>
+                    <p><a href="#">Documentation</a></p>
+                    <p><a href="#">Changelog</a></p>
+                </div>
+
+                <div class="col-lg-2 col-6 my-3">
+                    <p class="text-uppercase" style="color: #566B94;">services</p>
+                    <p><a href="#">Documentation</a></p>
+                    <p><a href="#">Changelog</a></p>
+                    <p><a href="#">Page Builder</a></p>
+                    <p><a href="#">UI Kit</a></p>
+                </div>
+
+                <div class="col-lg-2 col-6 my-3">
+                    <p class="text-uppercase" style="color: #566B94;">connect</p>
+                    <p><a href="#">Page Builder</a></p>
+                    <p><a href="#">UI Kit</a></p>
+                    <p><a href="#">Styleguide</a></p>
+                    <p><a href="#">Documentation</a></p>
+                    <p><a href="#">Changelog</a></p>
+                    <p><a href="#">Documentation</a></p>
+                    <p><a href="#">Changelog</a></p>
+                </div>
+
+                <div class="col-lg-2 col-6 my-3">
+                    <p class="text-uppercase" style="color: #566B94;">legal</p>
+                    <p><a href="#">Documentation</a></p>
+                    <p><a href="#">Changelog</a></p>
+                    <p><a href="#">Page Builder</a></p>
+                </div>
+
+
+            </div><!-- / row -->
+        </div> <!-- / container -->
+    </section>
+    <!-- END OF FOOTER
+    ================================================== -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

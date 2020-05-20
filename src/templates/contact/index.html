@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<!-- Contact
+    ================================================== -->
+<section class="testimonials-section" style="background-image: url(/static/images/wave2.svg);>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">&nbsp;</div>
+            <div class="col-md-4 col-12">
+                <div class="card card-common">
+                    <div class="card-header">
+                        <h1 class="text-center">Drop a line</h1>
+                    </div>
+                    <div class="card-body">
+                        <form class="" action="{{ url_for('contact') }}" method="POST" id="new-post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Full name" id="fullname"
+                                    name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email (example@g.com)" id="email"
+                                    name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" name="message" placeholder="Message"
+                                    required rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">&nbsp;</div>
+        </div>
+    </div>
+</section>
+<!-- END OF ABOUT
+    ================================================== -->
+
+<!-- SHAPE
+    ================================================== -->
+<section class="shape" style="background-image: url({{ url_for('static', filename='/images/wave3.svg') }});">
+
+</section>
+<!-- END OF SHAPE
+    ================================================== -->
+{% endblock %}

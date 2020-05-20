@@ -1,0 +1,663 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <!-- WELCOME
+    ================================================== -->
+    <section class="welcome-section my-5 animation-b-to-t">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12 text-md-left text-center mt-md-6">
+
+                    <!-- header -->
+                    <h1 class="display-5">Welcome to <span class="text-primary">Landkit</span>.<br>
+                        Develop anything.</h1>
+
+                    <!-- content -->
+                    <p class="lead text-muted my-4">Build a beautiful, modern website with flexible <br>Bootstrap
+                        components built
+                        from scratch.</p>
+
+                    <!-- button -->
+                    <div class="mt-5 text-md-left text-center">
+                        <a class="btn btn-primary p-3 mr-3 lift text-light">
+                            <span class="h6">View all Pages<i class="fas fa-arrow-right ml-2"></i></span>
+                        </a>
+                        <a class="btn btn-primary-soft p-3 lift bg-light">
+                            <span class="h6 text-primary">Documentation</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <!-- image -->
+                    <img src="{{ url_for('static', filename='images/illustration-2.png') }}" alt="" class="img-fluid">
+                </div>
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+    </section>
+    <!-- END OF WELCOME
+    ================================================== -->
+
+    <!-- FEATURES 
+    ================================================== -->
+    <section class="features-section my-5 animation-b-to-t">
+        <div class="container">
+            <div class="row">
+                <!-- built -->
+                <div class="col-md-4 col-12 text-md-left text-center">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h24v24H0z" />
+                            <path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" />
+                            <path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"
+                                opacity=".3" />
+                        </g>
+                    </svg>
+                    <p class="h5 mb-3">Built for developers</p>
+                    <p class="text-muted">
+                        Landkit is built to make your life easier. Variables, build tooling, documentation, and reusable
+                        components.
+                    </p>
+                </div>
+
+                <!-- design -->
+                <div class="col-md-4 col-12 text-md-left text-center">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h24v24H0z" />
+                            <path
+                                d="M5.5 4h4A1.5 1.5 0 0111 5.5v1A1.5 1.5 0 019.5 8h-4A1.5 1.5 0 014 6.5v-1A1.5 1.5 0 015.5 4zm9 12h4a1.5 1.5 0 011.5 1.5v1a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-1a1.5 1.5 0 011.5-1.5z"
+                                fill="#335EEA" />
+                            <path
+                                d="M5.5 10h4a1.5 1.5 0 011.5 1.5v7A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-7A1.5 1.5 0 015.5 10zm9-6h4A1.5 1.5 0 0120 5.5v7a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 0114.5 4z"
+                                fill="#335EEA" opacity=".3" />
+                        </g>
+                    </svg>
+                    <p class="h5 mb-3">Designed to be modern</p>
+                    <p class="text-muted">
+                        Designed with the latest design trends in mind. Landkit feels modern, minimal, and beautiful.
+                    </p>
+                </div>
+
+                <!-- documentation -->
+                <div class="col-md-4 col-12 text-md-left text-center">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h24v24H0z" />
+                            <path
+                                d="M17.272 8.685a1 1 0 111.456-1.37l4 4.25a1 1 0 010 1.37l-4 4.25a1 1 0 01-1.456-1.37l3.355-3.565-3.355-3.565zm-10.544 0L3.373 12.25l3.355 3.565a1 1 0 01-1.456 1.37l-4-4.25a1 1 0 010-1.37l4-4.25a1 1 0 011.456 1.37z"
+                                fill="#335EEA" />
+                            <rect fill="#335EEA" opacity=".3" transform="rotate(15 12 12)" x="11" y="4" width="2"
+                                height="16" rx="1" />
+                        </g>
+                    </svg>
+                    <p class="h5 mb-3">Documentation for everythings</p>
+                    <p class="text-muted">
+                        We've written extensive documentation for components and tools, so you never have to reverse
+                        engineer
+                        anything.
+                    </p>
+                </div>
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+    </section>
+    <!-- END OF FEATURES
+    ================================================== -->
+
+    <!-- BRANDS 
+    ================================================== -->
+    <section class="brands-section animation-b-to-t">
+        <div class="container">
+            <div class="row text-center text-md-left text-muted font-weight-bold">
+                <div class="h4 col-6 col-sm-4 col-md-2">Airbnb</div>
+                <div class="h4 col-6 col-sm-4 col-md-2">coinbase</div>
+                <div class="h4 col-6 col-sm-4 col-md-2">dribble</div>
+                <div class="h4 col-6 col-sm-4 col-md-2">Instagram</div>
+                <div class="h4 col-6 col-sm-4 col-md-2">NETFLIX</div>
+                <div class="h4 col-6 col-sm-4 col-md-2">Pinterest</div>
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+    </section>
+    <!-- END OF BRANDS
+    ================================================== -->
+
+    <!-- ABOUT 
+    ================================================== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="animation-l-to-r">
+                        <div class="card card-common">
+                            <img src="{{ url_for('static', filename='images/photo-2.jpg') }}" alt=""
+                                class="card-img-top rounded" style="border-radius: 10px 10px 0 0;">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-label-group">
+                                        <input type="text" class="form-control form-control-flush about-button"
+                                            id="cardName" placeholder="Name">
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="email" class="form-control form-control-flush about-button"
+                                            id="cardName" placeholder="Email">
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="passsword" class="form-control form-control-flush about-button"
+                                            id="cardName" placeholder="Password">
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-block btn-secondary btn-lg lift mt-3" type="submit">
+                                            Download a sample
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 animation-r-to-l pl-md-5">
+                    <div class="row text-md-left text-center ml-5">
+                        <h3 class="display-7">The most useful resource</h3>
+                        <h3 class="mb-4 display-7" style="color: #60C7AD;">ever created for
+                            <span href="" class="typewrite" data-period="2000"
+                                data-type='[ "developers.", "founders.", "designers."]'>
+                                <span class="wrap"></span>
+                            </span>
+                        </h3>
+                        <p class="lead text-primary">
+                            Using Landkit to build your site means never worrying about designing another page or cross
+                            browser
+                            compatibility. Our ever-growing library of components and pre-designed layouts will make
+                            your life easier.
+                        </p>
+                    </div>
+
+                    <div class="row text-md-left text-center ml-5">
+                        <div class="col-md-6 col-12">
+                            <div class="my-2">
+                                <i class="fas fa-check-circle text-info fa-lg"></i> Lifetime updates
+                            </div>
+                            <div class="my-2">
+                                <i class="fas fa-check-circle text-info fa-lg"></i> Tons of assets
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-12">
+                            <div class="my-2">
+                                <i class="fas fa-check-circle text-info fa-lg"></i> Tech support
+                            </div>
+                            <div class="my-2">
+                                <i class="fas fa-check-circle text-info fa-lg"></i> Integration ready
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <!-- second about section -->
+            <div class="row align-items-center second-about-section my-5">
+                <div class="col-lg-6 col-12 text-md-left text-center">
+                    <div class="animation-l-to-r">
+                        <!-- header -->
+                        <h3 class="display-7">We have lots of experience</h3>
+                        <h3 class="text-primary mb-4 display-7">building Bootstrap themes.</h3>
+
+                        <!-- content -->
+                        <p class="lead text-muted my-4">
+                            We've built well over a dozen Bootstrap themes and sold tens of thousands of copies.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 8H8a4 4 0 00-4 4v1a3 3 0 003 3v2a5 5 0 01-5-5v-1a6 6 0 016-6h4V4.728a.5.5 0 01.8-.4l2.856 2.133a.5.5 0 01-.001.802l-2.857 2.121A.5.5 0 0112 8.983V8z"
+                                            fill="#335EEA" />
+                                        <path
+                                            d="M12.058 16H16a4 4 0 004-4v-1a3 3 0 00-3-3V6a5 5 0 015 5v1a6 6 0 01-6 6h-3.942v.983a.5.5 0 01-.798.401l-2.857-2.12a.5.5 0 010-.803l2.856-2.134a.5.5 0 01.8.401V16z"
+                                            fill="#335EEA" opacity=".3" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="col-10">
+                                <h6>Bootstrap users since the beginning</h6>
+                                <p class="text-muted">We've been developing with Bootstrap since it was publicly
+                                    released in
+                                    2011.</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M17.272 8.685a1 1 0 111.456-1.37l4 4.25a1 1 0 010 1.37l-4 4.25a1 1 0 01-1.456-1.37l3.355-3.565-3.355-3.565zm-10.544 0L3.373 12.25l3.355 3.565a1 1 0 01-1.456 1.37l-4-4.25a1 1 0 010-1.37l4-4.25a1 1 0 011.456 1.37z"
+                                            fill="#335EEA" />
+                                        <rect fill="#335EEA" opacity=".3" transform="rotate(15 12 12)" x="11" y="4"
+                                            width="2" height="16" rx="1" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="col-10">
+                                <h6>Deep understanding of Bootstrap</h6>
+                                <p class="text-muted">We've watched Bootstrap grow up over the years and understand it
+                                    better than almost
+                                    anyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 animation-r-to-l">
+                    <!-- image -->
+                    <img src="{{ url_for('static', filename='images/dashkit.jpg') }}" alt="" class="img-fluid">
+                </div>
+            </div> <!-- / row -->
+
+        </div> <!-- /container -->
+    </section>
+    <!-- END OF ABOUT
+    ================================================== -->
+
+    <!-- TESTIMONIALS
+    ================================================== -->
+    <section class="testimonials-section"
+        style="background-image: url('{{ url_for('static', filename='/images/wave.svg') }}');">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <!-- Heading -->
+                    <h2 class="mb-4">
+                        Our customers are our biggest fans.
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-7 mb-md-2">
+                        We dont' like to brag, but we don't mind letting our customers do it for us.
+                    </p>
+                    <p class="text-muted mb-7 mb-md-9">
+                        Here are a few nice things folks have said about our themes over the years.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" id="row-carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                    style="width: 1000px; background-color: white;">
+                    <!-- <ol class="carousel-indicators text-primary">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol> -->
+                    <div class="carousel-inner">
+
+                        <!-- / carousel-item -->
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class=" col-md-6 col-12 card-carousel-l">
+                                        <div class="image-carousel">
+                                            <img class="img-fluid img-caro"
+                                                src="{{ url_for('static', filename='images/photo-26.jpg') }}"
+                                                alt="First slide">
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6 col-12 card-carousel-r">
+                                        <div class="text-carousel">
+                                            <h3 class="text-primary my-5">
+                                                Instagram
+                                            </h3>
+                                            <p class="lead px-5">“Landkit is hands down the most useful front end
+                                                Bootstrap
+                                                theme
+                                                I've ever
+                                                used. I can't wait to use it again for my next project.”</p>
+                                            <p class="lead text-muted text-uppercase">russ d'sa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- / carousel-item -->
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class=" col-md-6 col-12 card-carousel-l">
+                                        <div class="image-carousel">
+                                            <img class="img-fluid img-caro"
+                                                src="{{ url_for('static', filename='images/photo-1.jpg') }}"
+                                                alt="First slide"">
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6 col-12 card-carousel-r">
+                                            <div class="text-carousel">
+                                                <h3 class="text-primary my-5">
+                                                    Airbnb
+                                                </h3>
+                                                <p class="lead px-5">“I've never used a theme as versatile and flexible
+                                                    as
+                                                    Landkit. It's
+                                                    my
+                                                    go to
+                                                    for building landing sites on almost any project.”</p>
+                                                <p class="lead text-muted text-uppercase">dave gamache</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- / carousel-item -->
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev" style="left: 0;">
+                            <span class="" aria-hidden="true">
+                                <span class="badge badge-primary badge-caro">
+                                    <i class="fas fa-arrow-left badge-icon"></i>
+                                </span>
+
+
+                            </span>
+                            <span class="sr-only primary">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="" aria-hidden="true">
+                                <span class="badge badge-primary badge-caro">
+                                    <i class="fas fa-arrow-right badge-icon"></i>
+                                </span>
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div> <!-- / carousel -->
+
+                </div><!-- / row -->
+            </div>
+    </section>
+    <!-- END OF TESTIMONIALS
+    ================================================== -->
+
+    <!-- STATS
+    ================================================== -->
+    <section class="bg-gray-200 stats-section">
+        <div class="container">
+            <div class="row text-center text-md-left">
+                <div class="col-md-6 col-12 stats-left">
+                    <h2>
+                        Stay focused on your business. <br>
+                        <span class="text-primary">Let us handle the design</span>.
+                    </h2>
+                    <p class="mb-6">
+                        You have a business to run. Stop worring about cross-browser bugs, designing new pages, keeping
+                        your
+                        components up to date. Let us do that for you.
+                    </p>
+                    <div class="row">
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td class="td-stats">100%</td>
+                                    <td class="td-stats">24/7</td>
+                                    <td class="td-stats-1">100K+</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-stats">
+                                        <span class="text-primary">Satisfaction</span>
+                                    </td>
+                                    <td class="td-stats">
+                                        <span class="text-primary">Support</span>
+                                    </td>
+                                    <td class="td-stats-1">
+                                        <span class="text-primary">Sales</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                        <img src="{{ url_for('static', filename='images/illustration-8.png') }}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF STATS
+    ================================================== -->
+
+    <!-- PRICING
+    ================================================== -->
+    <section class="pricing-section"
+        style="background-image: url('{{ url_for('static', filename='/images/wave2.svg') }}');">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-12">
+                    <div>
+                        <h2 class="mb-5">Fair, simple pricing for all.</h2>
+                        <p class="lead text-primary">
+                            All types of businesses need access to development resources, so we<br>
+                            give you the option to decide how much you need to use.
+                        </p>
+                    </div>
+
+                    <div class="switch-rate">
+                        <table class="table-rate">
+                            <tr>
+                                <td class="px-2" style="color: #879BB8;">Anual</td>
+                                <td class="px-2">
+                                    <input type="checkbox" id="switch-check" onclick="myFunction()">
+                                </td>
+                                <td class="px-2" style="color: #879BB8;">Monthly</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div> <!-- / row -->
+
+            <!-- card row -->
+            <div class="row mt-5 justify-content-center">
+
+                <!-- first card-->
+                <div class="col-md-6 col-12 container-card-l mx-0 px-0 animation-b-to-t">
+                    <div class="card general-card">
+                        <div class="text-center mt-5">
+                            <span class="badge badge-pill text-primary"
+                                style="background-color: #EBE9FC; font-size: medium;">
+                                <div class="text-uppercase p-1">Standard</div>
+                            </span>
+                        </div>
+                        <div class="text-center mt-5">
+                            <div><sup class="h1 display-4">$</sup><span class="h1 display-3" id="demo">49</span>/mo
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="ml-5 px-4 py-1"><i class="far fa-check-circle fa-lg"
+                                    style="color: #5BC5A8;"></i>&nbsp;&nbsp;&nbsp;&nbsp;Rich, responsive landing pages
+                            </p>
+                            <p class="ml-5 px-4 py-1"><i class="far fa-check-circle fa-lg"
+                                    style="color: #5BC5A8;"></i>&nbsp;&nbsp;&nbsp;&nbsp;100+ styled components</p>
+                            <p class="ml-5 px-4 py-1"><i class="far fa-check-circle fa-lg"
+                                    style="color: #5BC5A8;"></i>&nbsp;&nbsp;&nbsp;&nbsp;Flexible, simple license</p>
+                            <p class="ml-5 px-4 py-1"><i class="far fa-check-circle fa-lg"
+                                    style="color: #5BC5A8;"></i>&nbsp;&nbsp;&nbsp;&nbsp;Speedy build tooling</p>
+                            <p class="ml-5 px-4 pt-1 pb-5"><i class="far fa-check-circle fa-lg"
+                                    style="color: #5BC5A8;"></i>&nbsp;&nbsp;&nbsp;&nbsp;6 months free support included
+                            </p>
+                        </div>
+                        <div class="card-footer" style="border-radius: 0 0 10px 10px; background-color: #255DE0">
+                            <div class=""><a href="#" class="btn btn-block text-white">Get it now</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second card-->
+                <div class="col-md-6 col-12 container-card-r mx-0 px-0 banner-b-to-t">
+                    <div class="card general-card">
+                        <div class="text-center mt-5">
+                            <span class="badge badge-pill text-primary p-2"
+                                style="background-color: #EBE9FC; font-size: medium;">
+                                <div class="text-uppercase p-1">Enterprise</div>
+                            </span>
+                        </div>
+                        <div class="lead my-5 py-5 px-5">
+                            <p class="text-center">
+                                We offer variable pricing with discounts for larger organizations. Get in touch with us
+                                and we’ll
+                                figure out something that works for everyone.
+                            </p>
+                        </div>
+                        <div class="card-footer mt-5" style="border-radius: 0 0 10px 10px; background-color: #D9E2EF;">
+                            <div class="text-dark"><a href="#" class="btn btn-block">Contact Us</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- / row -->
+
+
+        </div> <!-- / container -->
+    </section>
+
+    <!-- END OF PRICING
+    ================================================== -->
+
+
+    <!-- FAQ
+    ================================================== -->
+    <section class="FAQ-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12 top-div mb-3">
+                    <div class="row">
+                        <!-- Badge -->
+                        <div class="col-1 col-sm-2 top-div-content">
+                            <div class="mynewbadge">
+                                <div class="new_badge">?</div>
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="col-11 col-sm-10 top-div-content">
+                            <h5 style="color: #D5D7DE;">Can I use Landkit for my clients?</h5>
+                            <p class="" style="color: #7486A6;">
+                                Absolutely. The Bootstrap Themes license allows you to build a websites for personal use
+                                or
+                                for a client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 top-div mb-3">
+                    <div class="row">
+                        <!-- Badge -->
+                        <div class="col-1 col-sm-2 top-div-content">
+                            <div class="mynewbadge">
+                                <div class="new_badge">?</div>
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="col-11 col-sm-10 top-div-content">
+                            <h5 style="color: #D5D7DE;">Is there a money back guarantee?</h5>
+                            <p class="" style="color: #7486A6;">
+                                Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your
+                                money
+                                back.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / row -->
+
+            <div class="row">
+                <div class="col-md-6 col-12 top-div mb-3">
+                    <div class="row">
+                        <!-- Badge -->
+                        <div class="col-1 col-sm-2 top-div-content">
+                            <div class="mynewbadge">
+                                <div class="new_badge">?</div>
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="col-11 col-sm-10 top-div-content">
+                            <h5 style="color: #D5D7DE;">Do I get free updates?</h5>
+                            <p class="" style="color: #7486A6;">
+                                Yes. We update all of our themes with each Bootstrap update, plus are constantly adding
+                                new
+                                components,
+                                pages, and features to our themes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 top-div mb-3">
+                    <div class="row">
+                        <!-- Badge -->
+                        <div class="col-1 col-sm-2 top-div-content">
+                            <div class="mynewbadge">
+                                <div class="new_badge">?</div>
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="col-11 col-sm-10 top-div-content px-md-0">
+                            <h5 style="color: #D5D7DE;">Does it work with Rails? React? Laravel?</h5>
+                            <p class="" style="color: #7486A6;">
+                                Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper
+                                customization, you can
+                                integrate it into your assets pipeline or build processes.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- / row -->
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-12 text-center">
+                    <span class="badge badge-pill bottom-badge mb-5">
+                        <div class="text-uppercase">get started</div>
+                    </span>
+
+                    <h1 class="text-light"> Get Landkit and save your time.</h1>
+                    <p style="color:#7486A6;" class=" mt-3 mb-5">
+                        Stop wasting time trying to do it the "right way" and build a site from scratch. <br>
+                        Landkit is faster, easier, and you still have complete control.
+                    </p>
+                    <button type="button" class="btn btn-lg lift text-light" style="background-color: #419E7F;">
+                        <span class="text-light" style="font-size: 15px; padding: 10px;">
+                            Buy it now&nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
+                        </span>
+                    </button>
+                </div>
+            </div><!-- / row -->
+        </div> <!-- / container -->
+    </section>
+    <!-- END OF FAQ
+    ================================================== -->
+
+    <!-- SHAPE  
+    ================================================== -->
+    <section class="shape" style="background-image: url({{ url_for('static', filename='/images/wave3.svg') }});">
+
+    </section>
+    <!-- END OF SHAPE  
+    ================================================== -->
+{% endblock %}
